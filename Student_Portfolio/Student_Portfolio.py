@@ -141,3 +141,11 @@ elif page == "Contact":
 
     if st.button("Send Message"):  
         st.success("Message Sent Successfully!")
+        
+    # Check if the file exists before loading
+image_path = "Boy Prince.jpg"
+if os.path.exists(image_path):
+    st.image(image_path, width=150, caption="Profile Pic (Owner Only)")
+else:
+    st.warning("Profile image not found. Please upload it.")
+
